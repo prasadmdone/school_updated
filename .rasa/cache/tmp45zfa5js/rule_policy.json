@@ -1,0 +1,30 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "utter_iamabot",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {
+      "[{\"prev_action\": {\"action_name\": \"utter_name\"}}, {\"active_loop\": {\"name\": \"form_1\"}, \"prev_action\": {\"action_name\": \"form_1\"}, \"slots\": {\"par\": [1.0], \"sch\": [1.0]}, \"user\": {\"entities\": [\"sch\"], \"intent\": \"schools\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"form_1\"}, \"prev_action\": {\"action_name\": \"utter_phone\"}, \"slots\": {\"cn\": [1.0], \"fname\": [1.0], \"par\": [1.0], \"sch\": [1.0]}, \"user\": {\"entities\": [\"fname\"], \"intent\": \"name\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"form_1\"}, \"prev_action\": {\"action_name\": \"utter_email\"}, \"slots\": {\"cn\": [1.0], \"fname\": [1.0], \"par\": [1.0], \"phone\": [1.0], \"sch\": [1.0]}, \"user\": {\"entities\": [\"phone\"], \"intent\": \"Phone\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"form_1\"}, \"prev_action\": {\"action_name\": \"utter_city\"}, \"slots\": {\"cn\": [1.0], \"fname\": [1.0], \"mail\": [1.0], \"par\": [1.0], \"phone\": [1.0], \"sch\": [1.0]}, \"user\": {\"entities\": [\"mail\"], \"intent\": \"email\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"form_1\"}, \"prev_action\": {\"action_name\": \"utter_admission\"}, \"slots\": {\"cn\": [1.0], \"ct\": [1.0], \"fname\": [1.0], \"mail\": [1.0], \"par\": [1.0], \"phone\": [1.0], \"sch\": [1.0]}, \"user\": {\"entities\": [\"ct\"], \"intent\": \"city\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"utter_admission\"}}, {\"active_loop\": {\"name\": \"form_1\"}, \"prev_action\": {\"action_name\": \"utter_cname\"}, \"slots\": {\"cn\": [1.0], \"ct\": [1.0], \"fname\": [1.0], \"mail\": [1.0], \"par\": [1.0], \"phone\": [1.0], \"sch\": [1.0]}, \"user\": {\"entities\": [\"ct\"], \"intent\": \"city\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}]",
+      "predicting default action with intent back",
+      "predicting default action with intent restart",
+      "handling active loops and forms - form_1",
+      "handling active loops and forms - form_2 - action_listen",
+      "predicting default action with intent session_start",
+      "handling active loops and forms - form_2",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bot_challenge\"}}, {\"prev_action\": {\"action_name\": \"utter_iamabot\"}, \"user\": {\"intent\": \"bot_challenge\"}}]"
+    ]
+  }
+}

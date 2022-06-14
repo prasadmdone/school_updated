@@ -1,0 +1,71 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+# - rule: Activate form_1
+#   steps:
+#   - intent: schools
+#   - action: form_1
+#   - active_loop: form_1
+
+# - rule: Submit form_1
+#   condition:
+#   - active_loop: form_1
+#   steps:
+#   - action: form_1
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+  # - action: action_submit
+
+# - rule: Activate form_2
+#   steps:
+#   - intent: city
+#   - action: form_2
+#   - active_loop: form_2
+
+# - rule: Submit form_2
+#   condition:
+#   - active_loop: form_2
+#   steps:
+#   - action: form_2
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+  # - action: action_submit
+
+# - action: utter_slots_values
+
+# rules:
+# - rule: Example of an unhappy path
+#   condition:
+#   # Condition that form is active.
+#   - active_loop: restaurant_form
+#   steps:
+#   # This unhappy path handles the case of an intent `chitchat`.
+#   - intent: chitchat
+#   - action: utter_chitchat
+#   # Return to form after handling the `chitchat` intent
+#   - action: restaurant_form
+#   - active_loop: restaurant_form
+# stories:
+# - story: User interrupts the form and doesn't want to continue
+#   steps:
+#   - intent: request_restaurant
+#   - action: restaurant_form
+#   - active_loop: restaurant_form
+#   - intent: stop
+#   - action: utter_ask_continue
+#   - intent: stop
+#   - action: action_deactivate_loop
+#   - active_loop: null

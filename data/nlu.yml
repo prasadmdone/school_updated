@@ -1,0 +1,512 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: schools
+  examples: |
+    - [Oakridge Bachupally School](sch)
+    - [Oakridge Gacchibowli School](sch)
+    - [Oakridge Vizag School](sch)
+    - [Oakridge Bengaluru School](sch)
+    - [Oakridge Mohali School](sch)
+- intent: Phone
+  examples: |
+    - [9999444400](phone)
+    - [9955662233](phone)
+    - [8876996611](phone)
+    - [1234567890](phone)
+    - [9999999999](phone)
+    - [8888888888](phone)
+    - [6098980789](phone)
+    - [9820909009](phone)
+    - [9898989898](phone)
+- intent: city
+  examples: |
+    - [lucknow](ct)
+    - [varansi](ct)
+    - [kanpur](ct)
+    - [new york](ct)
+    - [washington](ct)
+    - [boston](ct)
+    - [london](ct)
+    - [perth]  (ct)
+    - [Jakarta](ct)
+    - [Delhi, DL-UP-HR](ct)
+    - [Manila](ct)
+    - [Seoul-Incheon](ct)
+    - [Shanghai, SHG-JS-ZJ](ct)
+    - [Karachi](ct)
+    - [Beijing, BJ](ct)
+    - [New York, NY-NJ-CT](ct)
+    - [Guangzhou-Foshan, GD](ct)
+    - [Sao Paulo](ct)
+    - [Mexico City](ct)
+    - [Mumbai, MH](ct)
+    - [Osaka-Kobe-Kyoto](ct)
+    - [Moscow](ct)
+    - [Dhaka](ct)
+    - [Cairo](ct)
+    - [Los Angeles, CA](ct)
+    - [Bangkok](ct)
+    - [Kolkata, WB](ct)
+    - [Buenos Aires](ct)
+    - [Tehran](ct)
+    - [Istanbul](ct)
+    - [Lagos](ct)
+    - [Shenzhen, GD](ct)
+    - [Rio de Janeiro](ct)
+    - [Kinshasa](ct)
+    - [Tianjin, TJ](ct)
+    - [Paris](ct)
+    - [Lima](ct)
+    - [Chengdu, SC](ct)
+    - [London](ct)
+    - [Nagoya](ct)
+    - [Lahore](ct)
+    - [Bangalore, KA](ct)
+    - [Chennai, TN](ct)
+    - [Chicago, IL-IN-WI](ct)
+    - [Bogota](ct)
+    - [Ho Chi Minh City](ct)
+    - [Hyderabad, AP](ct)
+    - [Dongguan, GD](ct)
+    - [Johannesburg-East Rand](ct)
+    - [Wuhan, HUB](ct)
+    - [Taipei](ct)
+    - [Hangzhou, ZJ](ct)
+    - [Hong Kong](ct)
+    - [Chengdu](ct), [SC](ct)
+    - [Delhi](ct)
+- intent: grade
+  examples: |
+    - [Toddler](gr)
+    - [Nursery](gr)
+    - [PP1](gr)
+    - [PP2](gr)
+    - [Grade1](gr)
+    - [Grade3](gr)
+    - [Grade11](gr)
+- intent: email
+  examples: |
+    - [kris@yahooo.com](mail)
+    - [hemant@gmail.com](mail)
+    - [saurav@gmail.com](mail)
+    - [kaka@gmail.com](mail)
+    - [raj123@gmail.com](mail)
+    - [sk1243@gmail.com](mail)
+    - [risk@yahooo.com](mail)
+- intent: cdob
+  examples: |
+    - [01/01/2015](cdb)
+    - [21/03/2014](cdb)
+    - [11/06/2018](cdb)
+    - [08/03/2022](cdb)
+    - [05/003/2015](cdb)
+    - [05/03/2015](cdb)
+    - [25/03/2015](cdb)
+    - [02/02/2015](cdb)
+- intent: relation
+  examples: |
+    - [Father](rel)
+    - [Mother](rel)
+    - [Others](rel)
+- intent: parent
+  examples: |
+    - [New Parent](par)
+    - [Existing Parent](par)
+    - [new parent](par)
+- intent: know_more
+  examples: |
+    - I Would you like to know more about school?
+    - know more
+    - may i know more about the school
+- intent: more
+  examples: |
+    - Curriculum
+    - Age Criteria
+    - Fee Details
+    - Admission Process
+- intent: Admission
+  examples: |
+    - Admission Enquiry
+    - can you tell me about admission process?
+    - i want to know about admission process.
+    - how can my son get admission ?
+- intent: academicyear
+  examples: |
+    - [2022-23](ay)
+    - [2023-24](ay)
+    - [2024-25](ay)
+    - [2025-26](ay)
+- intent: name
+  examples: |
+    - rahul singh
+    - ravi singh
+    - kiran
+    - sai
+    - himanshu dutt
+    - akshay kumar
+    - ram prasad
+    - sony singh
+    - Narendra Modi
+    - Sandeep Dass
+    - Satya sri
+    - jeevan khan
+    - Srinivas Kumar
+    - rohith
+    - mohit
+    - hemant
+    - arnav
+    - Shravan
+    - Harshith
+    - netra
+    - ram
+    - syed
+    - rahim
+    - shyam
+    - divya
+    - bharathi
+    - chinni
+    - kittu
+    - pavan
+    - radha
+    - radhika
+    - karan
+    - barjraj
+    - ramdin verma
+    - sharat chandran
+    - birender mandal
+    - kushal
+    - kasid
+    - shiv prakash
+    - vikram singh
+    - sanjay
+    - abhi
+    - ram dutt gupta
+    - chanderpal
+    - khursid
+    - rajeev
+    - durgesh
+    - nahar singh
+    - ravi mishra
+    - mann singh
+    - rohit singh
+- lookup: city
+  examples: |
+    - lucknow
+    - varansi
+    - kanpur
+    - new york
+    - washington
+    - boston
+    - london
+    - perth
+    - Jakarta
+    - Delhi, DL-UP-HR
+    - Manila
+    - Seoul-Incheon
+    - Shanghai, SHG-JS-ZJ
+    - Karachi
+    - Beijing, BJ
+    - New York, NY-NJ-CT
+    - Guangzhou-Foshan, GD
+    - Sao Paulo
+    - Mexico City
+    - Mumbai, MH
+    - Osaka-Kobe-Kyoto
+    - Moscow
+    - Dhaka
+    - Cairo
+    - Los Angeles, CA
+    - Bangkok
+    - Kolkata, WB
+    - Buenos Aires
+    - Tehran
+    - Istanbul
+    - Lagos
+    - Shenzhen, GD
+    - Rio de Janeiro
+    - Kinshasa
+    - Tianjin, TJ
+    - Paris
+    - Lima
+    - Chengdu, SC
+    - London
+    - Nagoya
+    - Lahore
+    - Bangalore, KA
+    - Chennai, TN
+    - Chicago, IL-IN-WI
+    - Bogota
+    - Ho Chi Minh City
+    - Hyderabad, AP
+    - Dongguan, GD
+    - Johannesburg-East Rand
+    - Wuhan, HUB
+    - Taipei
+    - Hangzhou, ZJ
+    - Hong Kong
+    - Chengdu , [SC]
+    - kanpur
+- lookup: name
+  examples: |
+    - saurav
+    - kiran
+    - sai
+    - himanshu dutt
+    - akshay kumar
+    - ram prasad
+    - sony singh
+    - Narendra Modi
+    - Sandeep Dass
+    - Satya sri
+    - jeevan khan
+    - Srinivas Kumar
+    - rohith
+    - mohit
+    - hemant
+    - arnav
+    - Shravan
+    - Harshith
+    - netra
+    - ram
+    - syed
+    - rahim
+    - shyam
+    - divya
+    - bharathi
+    - chinni
+    - kittu
+    - pavan
+    - radha
+    - radhika
+    - karan
+    - barjraj
+    - ramdin verma
+    - sharat chandran
+    - birender mandal
+    - kushal
+    - kasid
+    - shiv prakash
+    - vikram singh
+    - sanjay
+    - abhi
+    - ram dutt gupta
+    - chanderpal
+    - khursid
+    - rajeev
+    - durgesh
+    - nahar singh
+    - sunder paal
+    - maansingh aswal
+    - sparsh
+    - santosh
+    - punit khandelwal
+    - dinesh sharma
+    - gulshan
+    - arvind kumar yadav
+    - nausad
+    - gurmit singh
+    - md. afsar
+    - shiv shakti singh
+    - moti lal
+    - kausal kumar
+    - rohit
+    - mohabbat ali
+    - raj kumar
+    - jaswant singh
+    - pitambar lal
+    - chotelal
+    - amit
+    - rupesh
+    - midda
+    - dharam singh
+    - manoj yadav
+    - ram singh
+    - preetam kumar
+    - ram kumar
+    - sarain
+    - pankaj kumar
+    - sheak shakir
+    - riyasat ali
+    - vinit katariya
+    - arindra
+    - kali charan
+    - badshya khan
+    - vikash
+    - devinder chadda
+    - aman
+    - mohan singh
+    - shivam
+    - yash mittal
+    - aakash
+    - chandesh
+    - sumit mitra
+    - supriyal sen
+    - gajender singh
+    - goldy
+    - irfan
+    - azaruddin
+    - mukul yadav
+    - pooran chand sharma
+    - manoj
+    - sanjay charee
+    - raja babu
+    - pawan
+    - sandeep
+    - rajkumar chawla
+    - parvesh
+    - mohd ataullah
+    - neeraj kumar
+    - jamil khan
+    - yogita
+    - rijul aggarwal
+    - mohd shakib
+    - rahul kumar
+    - rajender
+    - suraj
+    - rizwan
+    - md mustafa
+    - har parsad
+    - raja babu
+    - rahul kumar
+    - Will
+    - James
+    - Samuel
+    - John
+    - George
+    - Sam
+    - Fred
+    - Richard
+    - William
+    - Bert
+    - Albert
+    - David
+    - Carl
+    - Henry
+    - Walter
+    - Frederick
+    - Andrew
+    - Ernest
+    - Lee
+    - Louis
+    - Rufus
+    - Tom
+    - Ben
+    - Francis
+    - Marion
+    - Luther
+    - Julius
+    - Lawrence
+    - Dan
+    - Warren
+    - Daniel
+    - Alfred
+    - Harvey
+    - Jim
+    - Leo
+    - Edward
+    - Willie
+    - Howard
+    - Eugene
+    - Clarence
+    - Chester
+    - Lewis
+    - Ira
+    - Herman
+    - Charles
+    - Clyde
+    - Theodore
+    - Calvin
+    - August
+    - Harry
+    - Archie
+    - Thomas
+    - Benjamin
+    - Arthur
+    - Homer
+    - Martin
+    - Perry
+    - Frank
+    - Jesse
+    - Alex
