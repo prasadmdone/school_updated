@@ -136,16 +136,17 @@ responses:
   utter_school:
   - text: Good Evening, Welcome to Oakridge International Schools. We have 5 schools in India. May I know which Oakridge School is your enquiry for?
     buttons:
-    - title: ABC Bachupally School
-      payload: ABC Bachupally School
+    - title: ABC Hyderabad School
+      payload: ABC Hyderabad School
     - title: ABC Gacchibowli School
       payload: ABC Gacchibowli School
     - title: ABC Vizag School
       payload: ABC Vizag School
     - title: ABC Bengaluru School
       payload: ABC Bengaluru School
-    - title: ABC Mohali School
-      payload: ABC Mohali School
+    - title: ABC Vijayawada School
+      payload: ABC Vijayawada School
+      
   utter_name:
   - text: Thank you for your interest in our Oakridge Bachupally School. Before we begin, please provide us with your First Name & Last Name.
   utter_phone:
