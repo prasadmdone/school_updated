@@ -1,0 +1,225 @@
+version: "3.1"
+
+stories:
+- story: greeting
+  steps:
+  - intent: greet
+  - action: utter_greet
+  
+# - story: interactive_story_1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: Admission
+#   - action: utter_parent
+#   - intent: parent
+#     entities:
+#     - par: New Parent
+#   - slot_was_set:
+#     - par: New Parent
+#   - action: utter_school
+#   - intent: schools
+#     entities:
+#     - sch: Oakridge Bachupally School
+#   - slot_was_set:
+#     - sch: Oakridge Bachupally School
+#   - action: utter_phone
+#   - intent: Phone
+#     entities:
+#     - phone: '9999444400'
+#   - slot_was_set:
+#     - phone: '9999444400'
+#   - action: utter_email
+#   - intent: email
+#     entities:
+#     - mail: sk1243@gmail.com
+#   - slot_was_set:
+#     - mail: sk1243@gmail.com
+#   - action: utter_city
+#   - intent: city
+#     entities:
+#     - ct: Delhi
+#   - slot_was_set:
+#     - ct: Delhi
+#   - action: utter_grade
+#   - intent: grade
+#     entities:
+#     - gr: Toddler
+#   - slot_was_set:
+#     - gr: Toddler
+#   - action: utter_academic_year
+#   - intent: academicyear
+#     entities:
+#     - ay: 2024-25
+#   - slot_was_set:
+#     - ay: 2024-25
+#   - action: utter_DOB
+#   - intent: cdob
+#     entities:
+#     - cdb: 01/01/2015
+#   - slot_was_set:
+#     - cdb: 01/01/2015
+#   - action: utter_ relation
+#   - intent: relation
+#     entities:
+#     - rel: Father
+#   - slot_was_set:
+#     - rel: Father
+#   - action: utter_admission
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# - story: story_1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: Admission
+#   - action: utter_parent
+#   - intent: parent
+#     entities:
+#     - par: Existing Parent
+#   - slot_was_set:
+#     - par: Existing Parent
+#   - action: utter_school
+#   - intent: schools
+#     entities:
+#     - sch: Oakridge Bachupally School
+#   - slot_was_set:
+#     - sch: Oakridge Bachupally School
+#   - action: utter_name
+  
+#   - action: utter_phone
+#   - intent: Phone
+#     entities:
+#     - phone: '9999444400'
+#   - slot_was_set:
+#     - phone: '9999444400'
+#   - action: utter_email
+#   - intent: email
+#     entities:
+#     - mail: kris@yahooo.com
+#   - slot_was_set:
+#     - mail: kris@yahooo.com
+#   - action: utter_city
+#   - intent: city
+#     entities:
+#     - ct: lucknow
+#   - slot_was_set:
+#     - ct: lucknow
+#   - action: utter_admission
+#   - action: utter_cname
+  
+#   - action: utter_grade
+#   - intent: grade
+#     entities:
+#     - gr: Nursery
+#   - slot_was_set:
+#     - gr: Nursery
+#   - action: utter_academic_year
+#   - intent: academicyear
+#     entities:
+#     - ay: 2023-24
+#   - slot_was_set:
+#     - ay: 2023-24
+#   - action: utter_DOB
+#   - intent: cdob
+#     entities:
+#     - cdb: 01/01/2015
+#   - action: utter_ relation
+#   - intent: relation
+#     entities:
+#     - rel: Father
+#   - slot_was_set:
+#     - rel: Father
+#   - action: utter_Thanks
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Admission
+  - action: utter_parent
+  - intent: parent
+    entities:
+    - par: New Parent
+  - slot_was_set:
+    - par: New Parent
+  - action: utter_school
+  - intent: schools
+    entities:
+    - sch: Oakridge Bachupally School
+  - slot_was_set:
+    - sch: Oakridge Bachupally School
+  - action: utter_name
+  - action: form_1
+  - active_loop: form_1
+  - slot_was_set:
+    - requested_slot: fname
+  - intent: name
+    entities:
+    - fname: akshay kumar
+  - slot_was_set:
+    - cn: akshay kumar
+  - slot_was_set:
+    - fname: akshay kumar
+  - action: utter_phone
+  - intent: Phone
+    entities:
+    - phone: '9999444400'
+  - slot_was_set:
+    - phone: '9999444400'
+  - action: utter_email
+  - intent: email
+    entities:
+    - mail: kris@yahooo.com
+  - slot_was_set:
+    - mail: kris@yahooo.com
+  - action: utter_city
+  - intent: city
+    entities:
+    - ct: lucknow
+  - slot_was_set:
+    - ct: lucknow
+  - action: utter_admission
+  - action: utter_cname
+  - action: form_2
+  - active_loop: form_2
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - intent: name
+    entities:
+    - fname: hari
+  - slot_was_set:
+    - cn: hari
+  - slot_was_set:
+    - fname: hari
+  - action: utter_grade
+  - intent: grade
+    entities:
+    - gr: Toddler
+  - slot_was_set:
+    - gr: Toddler
+  - action: utter_academic_year
+  - intent: academicyear
+    entities:
+    - ay: 2024-25
+  - slot_was_set:
+    - ay: 2024-25
+  - action: utter_DOB
+  - intent: cdob
+    entities:
+    - cdb: 01/01/2015
+  - slot_was_set:
+    - cdb: 01/01/2015
+  - action: utter_ relation
+  - intent: relation
+    entities:
+    - rel: Father
+  - slot_was_set:
+    - rel: Father
+  - action: utter_Thanks
+  - intent: goodbye
+  - action: utter_goodbye

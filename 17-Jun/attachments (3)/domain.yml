@@ -1,0 +1,266 @@
+version: '3.1'
+intents:
+- Admission
+- Phone
+- academicyear
+- affirm
+- bot_challenge
+- cdob
+- city
+- deny
+- email
+- goodbye
+- grade
+- greet
+- know_more
+- mood_great
+- mood_unhappy
+- name
+- opportunity
+- out_of_scope
+- parent
+- please_rephrase
+- relation
+- schools
+entities:
+- fname
+- gr
+- cdb
+- par
+- rel
+- ay
+- mail
+- phone
+- ct
+- sch
+- cn
+slots:
+  ct:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: ct
+  cn:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: fname
+  gr:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: gr
+  mail:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: mail
+  ay:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: ay
+  cdb:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: cdb
+  rel:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: rel
+  fname:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: fname
+  sch:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: sch
+  par:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: par
+  phone:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: phone
+forms:
+  form_1:
+    required_slots:
+    - fname
+  form_2:
+    required_slots:
+    - cn
+responses:
+  utter_greet:
+  - text: Hello, Welcome to ABD School!!! How can I help you today?
+    buttons:
+    - title: Admission Enquiry
+      payload: Admission Enquiry
+    - title: Job Opportunities
+      payload: Job Opportunities
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: GoodBye have a nice day.
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_parent:
+  - text: Are you a new or an existing parent?
+    buttons:
+    - title: New Parent
+      payload: New Parent
+    - title: Existing Parent
+      payload: Existing Parent
+  utter_school:
+  - text: Good Evening, Welcome to Oakridge International Schools. We have 5 schools in India. May I know which Oakridge School is your enquiry for?
+    buttons:
+    - title: Oakridge Bachupally School
+      payload: Oakridge Bachupally School
+    - title: Oakridge Gacchibowli School
+      payload: Oakridge Gacchibowli School
+    - title: Oakridge Vizag School
+      payload: Oakridge Vizag School
+    - title: Oakridge Bengaluru School
+      payload: Oakridge Bengaluru School
+    - title: Oakridge Mohali School
+      payload: Oakridge Mohali School
+  utter_name:
+  - text: Thank you for your interest in our {sch}. Before we begin, please provide us with your and your child's Name.
+  utter_phone:
+  - text: Pls enter your Mobile number.
+  utter_email:
+  - text: Please enter your email.
+  utter_city:
+  - text: May I know your current residing city?
+  utter_admission:
+  - text: All the information will be shared with one of our Admission Officers. Our officer will get back to you with more details in 24 business hours.
+  utter_cname:
+  - text: May I know the Child's Name?
+  utter_grade:
+  - text: May I know which Grade are you enquiring for?
+    buttons:
+    - title: Toddler
+      payload: Toddler
+    - title: Nursery
+      payload: Nursery
+    - title: Grade1
+      payload: Grade1
+    - title: Grade2
+      payload: Grade2
+    - title: Grade3
+      payload: Grade3
+  utter_academic_year:
+  - text: Which academic year is the enquiry for?
+    buttons:
+    - title: 2022-23
+      payload: 2022-23
+    - title: 2023-24
+      payload: 2023-24
+    - title: 2024-25
+      payload: 2024-25
+    - title: 2025-26
+      payload: 2025-26
+    - title: other
+      payload: type here
+  utter_DOB:
+  - text: Please enter your Child's Date Of Birth.
+  utter_ relation:
+  - text: What is your relationship with the child?
+    buttons:
+    - title: Father
+      payload: Father
+    - title: Mother
+      payload: Mother
+    - title: Others
+      payload: Others
+  utter_Thanks:
+  - text: 'Thank you. Your personal details are kept secured via our server and have been shared with one of our Admissions Officer. One of our Admissions officer will get in touch with you within 24 Business hours '
+  utter_know_more:
+  - text: Would you like to know more about our school?
+  utter_more_info:
+  - text: What would you like to know more about?
+    buttons:
+    - title: Curriculum
+      payload: Curriculum
+    - title: Age Criteria
+      payload: Age Criteria
+    - title: Fee Details
+      payload: Fee Details
+    - title: Admission Process
+      payload: Admission Process
+utter_apology:
+- text: I apologise, I do not have any fee details with me. The fee is based on the curriculum selected. Our Admissions Officer will get in touch with you with more details.
+utter_curriculum:
+- text: Our schools offer various International curricula which build a strong foundation for your child and be a stepping stone for some of the top international universities. Please select the school to know more about the curriculum offered.
+  buttons:
+  - title: Gachibowli
+    payload: Gachibowli
+  - title: Bachupally
+    payload: Bachupally
+  - title: Bengaluru
+    payload: Bengaluru
+  - title: Vizag
+    payload: Vizag
+  - title: Mohali
+    payload: Mohali
+utter_curriculum_info:
+- text: 1. The Switzerland-based International Baccalaureate Organization (IBO) For – a. Primary Years (IB-PYP), b. Middle Years (IB-MYP) c. IB Diploma Programme (IBDP) 2. National Curriculum Central Board of Secondary Education (CBSE), New Delhi (Available from Grade-7 to Grade-12)
+utter_age_criteria:
+- text: The child should be at least 2.6 years as on the 1st of June to be eligible for admission into Nursery.
+utter_Admission_Process:
+- text: The academic session starts from June to April, we are open with mid-year admissions also.The admission process for Nursery to Grade III includes an observation & interaction with teachers.Grade IV onwards they will have a simple observation (written) in Maths & English.Grade VII onwards they will have an aptitude test in Maths, English, Science & II language. Child presence is mandatory along with both the parents and his/her academic performance record. There will be an interaction scheduled w… Read more (POP UP)
+utter_thank_you:
+- text: Thank You for your Interest in Schools.
+utter_info:
+- text: "Here is the information you provided.\n- CITY: {ct}\n- CHILD'S NAME: {cn}\n- GRADE : {gr}\n- EMAIL: {mail}\n- ACADEMIC YEAR: {ay}\n- relation: {rel}\n- full name: {fnm}\n- school: {sch}\n- DOB: {cdb}\n- Parent: {par}\n- phone: {phone}\nIF YOU WANT TO REFILL THE INFORMATION PLS CLICK '/RESTART'"
+utter_submit:
+- text: DO you want to submit?
+actions:
+- action_submit
+- utter_ relation
+- utter_Admission_Process
+- utter_DOB
+- utter_Thanks
+- utter_academic_year
+- utter_admission
+- utter_age_criteria
+- utter_apology
+- utter_cheer_up
+- utter_city
+- utter_cname
+- utter_curriculum
+- utter_curriculum_info
+- utter_did_that_help
+- utter_email
+- utter_goodbye
+- utter_grade
+- utter_greet
+- utter_happy
+- utter_iamabot
+- utter_info
+- utter_know_more
+- utter_more_info
+- utter_name
+- utter_opportunity
+- utter_out_of_scope
+- utter_parent
+- utter_phone
+- utter_please_rephrase
+- utter_school
+- utter_thank_you
+- validate_info_form
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
