@@ -84,11 +84,11 @@ nlu:
     - am I talking to a human?
 - intent: schools
   examples: |
-    - [Oakridge Bachupally School](sch)
-    - [Oakridge Gacchibowli School](sch)
-    - [Oakridge Vizag School](sch)
-    - [Oakridge Bengaluru School](sch)
-    - [Oakridge Mohali School](sch)
+    - [ABC Bachupally School](sch)
+    - [ABC Gacchibowli School](sch)
+    - [ABC Vizag School](sch)
+    - [ABC Bengaluru School](sch)
+    - [ABC Mohali School](sch)
 - intent: Phone
   examples: |
     - [9999444400](phone)
@@ -157,6 +157,10 @@ nlu:
     - [Hong Kong](ct)
     - [Chengdu](ct), [SC](ct)
     - [Delhi](ct)
+    - [Vizag](ct)
+    - [Visakhapatnam](ct)
+    - [Anakapalli](ct)
+    - [Anakapally](ct)
 - intent: grade
   examples: |
     - [Toddler](gr)
@@ -330,6 +334,11 @@ nlu:
     - kanpur
 - lookup: name
   examples: |
+    - reddy
+    - rao
+    - naidu
+    - sharma
+    - sarma
     - saurav
     - kiran
     - sai
